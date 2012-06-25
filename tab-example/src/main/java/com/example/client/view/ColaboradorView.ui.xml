@@ -1,0 +1,42 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'	
+	xmlns:gxt="urn:import:com.sencha.gxt.widget.core.client"
+	xmlns:container="urn:import:com.sencha.gxt.widget.core.client.container"
+	xmlns:toolbar="urn:import:com.sencha.gxt.widget.core.client.toolbar"
+    xmlns:button="urn:import:com.sencha.gxt.widget.core.client.button"
+    xmlns:grid="urn:import:com.sencha.gxt.widget.core.client.grid" >
+	
+	<ui:with type="com.example.client.images.AppImages" field="images" />
+    <ui:with type="com.example.client.Messages" field="messages" />
+    
+    <ui:with type="com.sencha.gxt.widget.core.client.container.VerticalLayoutContainer.VerticalLayoutData" field="verticalLayoutData">
+      <ui:attributes width="1" height="-1" />
+    </ui:with>
+    
+    <ui:with type="com.sencha.gxt.widget.core.client.container.VerticalLayoutContainer.VerticalLayoutData" field="centerLayoutData">
+      <ui:attributes width="1" height="1" />
+    </ui:with>
+
+	<gxt:ContentPanel ui:field="panel" headingText="{messages.titlePanel}" >
+	  <container:VerticalLayoutContainer>
+	  	  <container:child layoutData="{verticalLayoutData}">
+            <toolbar:ToolBar ui:field="toolBar">
+              <button:TextButton text="{messages.add}" ui:field="add" icon="{images.add}" />
+              <toolbar:SeparatorToolItem />
+              <button:TextButton text="{messages.edit}" ui:field="edit" icon="{images.update}" enabled="false" />
+              <toolbar:SeparatorToolItem />
+              <button:TextButton text="{messages.delete}" ui:field="delete" icon="{images.delete}" enabled="false" />
+              <toolbar:FillToolItem />
+            </toolbar:ToolBar>
+          </container:child>
+          <container:child layoutData="{centerLayoutData}" >
+            <grid:Grid ui:field="grid" />                        
+          </container:child>
+          <container:child layoutData="{verticalLayoutData}">
+            <toolbar:PagingToolBar ui:field="pagToolBar" />
+          </container:child>
+	  </container:VerticalLayoutContainer>
+	</gxt:ContentPanel>
+</ui:UiBinder>

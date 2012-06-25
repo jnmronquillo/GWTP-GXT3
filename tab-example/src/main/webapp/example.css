@@ -1,0 +1,21 @@
+#example-header {
+    background: url("images/bg.gif") repeat-x scroll 0 50% #1E4176;
+    border: 0 none;
+    padding-left: 3px;
+}
+
+#example-title {
+    color: white;
+    font: 16px tahoma,arial,sans-serif;
+    padding: 6px 0 8px 6px;
+}
+
+/*gif loader*/
+.busy-indicator{
+	background-color: white;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+	padding-top: 3px;
+	margin-left: 190px;
+}

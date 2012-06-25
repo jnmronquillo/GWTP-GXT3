@@ -1,0 +1,59 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'
+	xmlns:gxt="urn:import:com.sencha.gxt.widget.core.client"
+	xmlns:form="urn:import:com.sencha.gxt.widget.core.client.form"
+	xmlns:container="urn:import:com.sencha.gxt.widget.core.client.container"
+ 	xmlns:button="urn:import:com.sencha.gxt.widget.core.client.button" >
+
+   <ui:with type="com.example.client.images.AppImages" field="images" />
+   <ui:with type="com.example.client.Messages" field="messages" />
+   
+   <ui:with type="com.sencha.gxt.widget.core.client.container.VerticalLayoutContainer.VerticalLayoutData" field="verticalLayoutData">
+     <ui:attributes width="1" height="-1" />
+   </ui:with>
+   
+	<gxt:Window ui:field="dialog" buttonAlign="END" resizable="false" modal="false" minHeight="231" >
+		<gxt:FramedPanel headerVisible="false" >
+		  <form:FieldSet ui:field="fieldSet" headingText="{messages.infoUser}" collapsible="false" >
+	       <container:VerticalLayoutContainer>
+	         <container:child layoutData="{verticalLayoutData}">
+	           <form:FieldLabel text="{messages.code}">
+	                <form:widget>
+	                  <form:TextField ui:field="codigo" allowBlank="false" />
+	                </form:widget>
+	              </form:FieldLabel>
+	         </container:child>
+	         <container:child layoutData="{verticalLayoutData}">
+	           <form:FieldLabel text="{messages.firstName}">
+	                <form:widget>
+	                  <form:TextField ui:field="nombres" allowBlank="false" />
+	                </form:widget>
+	              </form:FieldLabel>
+	         </container:child>
+	         <container:child layoutData="{verticalLayoutData}">
+	           <form:FieldLabel text="{messages.lastName}">
+	                <form:widget>
+	                  <form:TextField ui:field="apellidos" allowBlank="false" />
+	                </form:widget>
+	              </form:FieldLabel>              
+	         </container:child>
+	         <container:child layoutData="{verticalLayoutData}">
+	           <form:FieldLabel text="{messages.age}">
+	                <form:widget>
+	                  <form:NumberField ui:field="edad" allowBlank="true" allowDecimals="false" allowNegative="false" />
+	                </form:widget>
+	              </form:FieldLabel>
+	         </container:child>	         
+	       </container:VerticalLayoutContainer>	       
+	      </form:FieldSet>	      
+	    </gxt:FramedPanel>
+	    <gxt:button>
+		  <button:TextButton text="{messages.cancel}" ui:field="cancel" icon="{images.cancel}" />
+		</gxt:button>   
+		<gxt:button>
+		  <button:TextButton text="{messages.save}" ui:field="save" icon="{images.save}" />
+		</gxt:button>   
+	</gxt:Window>
+</ui:UiBinder>

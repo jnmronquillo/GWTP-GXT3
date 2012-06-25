@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='example'>
+  <inherits name='com.google.gwt.user.User' />  
+  <inherits name='com.google.gwt.i18n.I18N'/>  
+  <inherits name='com.google.web.bindery.requestfactory.RequestFactory' />
+  <inherits name='com.sencha.gxt.ui.GXT'/>
+  <inherits name="com.sencha.gwt.uibinder.UiBinder" />
+  <inherits name="com.google.gwt.inject.Inject"/>
+  <inherits name='com.google.gwt.resources.Resources'/>
+  
+  <inherits name='com.google.gwt.user.theme.standard.Standard'/>
+	
+  <inherits name='com.gwtplatform.mvp.Mvp'/>
+  
+  <inherits name="com.google.gwt.logging.Logging"/>
+  <set-property name="gwt.logging.logLevel" value="SEVERE"/>          # To change the default logLevel
+  <set-property name="gwt.logging.enabled" value="TRUE"/>            # To disable logging
+  <set-property name="gwt.logging.consoleHandler" value="ENABLED"/>  # To disable a default Handler
+  <set-property name="gwt.logging.developmentModeHandler" value="DISABLED" />
+  <set-property name="gwt.logging.popupHandler" value="DISABLED" />
+  <set-property name="gwt.logging.systemHandler" value="DISABLED" />
+  <set-property name="gwt.logging.firebugHandler" value="ENABLED" />
+  <set-property name="gwt.logging.simpleRemoteHandler" value="ENABLED" />
+  
+  <entry-point class='com.example.client.example' />
+  <extend-property name="locale" values="es_PE"/>
+
+  <source path='client' />
+  <source path='shared' />
+  
+  <define-configuration-property name='gin.ginjector' is-multi-valued='false' />
+  <set-configuration-property name='gin.ginjector' value='com.example.client.gin.ClientGinjector' />
+
+</module>
