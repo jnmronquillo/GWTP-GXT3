@@ -50,15 +50,25 @@
     <container:SimpleContainer>
 	  <container:child layoutData="{outerData}">
 	    <container:BorderLayoutContainer ui:field="con" borders="false">
+		  
 		  <container:north layoutData="{northData}">
 		    <g:HTMLPanel><div id="example-header"><div id="example-title">Tab Example</div></div></g:HTMLPanel>
 		  </container:north>
+		  
 		  <container:west layoutData="{westData}">
+		  
+			<!--for presenter widget -->
 		    <gxt:ContentPanel headingText="Menu" ui:field="menuPanel" />		    
+		  
 		  </container:west>
+		  
 		  <container:center layoutData="{centerData}">
+		  
+		    <!--for nested presenter -->
 		    <gxt:ContentPanel ui:field="contentPanel" borders="false" headerVisible="false" bodyBorder="false" />		    
+		  
 		  </container:center>
+	    
 	    </container:BorderLayoutContainer>      
 	  </container:child>
     </container:SimpleContainer>

@@ -14,14 +14,17 @@ import com.gwtplatform.mvp.client.proxy.RevealRootContentEvent;
 public class LayoutPresenter extends
 		Presenter<LayoutPresenter.MyView, LayoutPresenter.MyProxy> {
 
+	//for nested presenters
 	@ContentSlot public static final Type<RevealContentHandler<?>> SLOT_content = new Type<RevealContentHandler<?>>();
 	
+	//for presenter widget
 	public static final Object SLOT_menu = new Object();
 	
 	public interface MyView extends View {
 		
 	}
 	
+	//for presenter widget
 	@Inject MenuPresenter menuPresenter;
 
 	@ProxyCodeSplit
@@ -48,7 +51,7 @@ public class LayoutPresenter extends
 	@Override
 	protected void onReset() {		
 		super.onReset();
-		
+		//for presenter widget
 		setInSlot(SLOT_menu, menuPresenter);
 	}
 }

@@ -12,8 +12,8 @@ public class LayoutView extends ViewImpl implements LayoutPresenter.MyView {
 
 	private final Widget widget;
 
-	@UiField ContentPanel contentPanel;
-	@UiField ContentPanel menuPanel;
+	@UiField ContentPanel contentPanel;//for nested presenter
+	@UiField ContentPanel menuPanel;//for presenter widget
 	
 	public interface Binder extends UiBinder<Widget, LayoutView> {
 	}

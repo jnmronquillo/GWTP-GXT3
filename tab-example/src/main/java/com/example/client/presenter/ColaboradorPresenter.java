@@ -187,9 +187,4 @@ public class ColaboradorPresenter extends
 		});
 	}
 	
-	@Override
-	protected void onReset() {
-		super.onReset();
-		
-	}
 }
