@@ -2,7 +2,7 @@ package com.example.client;
 
 /**
  * Interface to represent the messages contained in resource bundle:
- * 	D:/juan/git-repos/gwtp-gxt3-example/tab-example/src/main/resources/com/example/client/Messages.properties'.
+ * 	D:/juan/git-repos/gwtp-gxt3-example/tab-example/src/main/java/com/example/client/Messages.properties'.
  */
 public interface Messages extends com.google.gwt.i18n.client.Messages {
   

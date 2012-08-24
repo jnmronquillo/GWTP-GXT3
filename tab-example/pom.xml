@@ -54,7 +54,14 @@
       <artifactId>requestfactory-server</artifactId>
       <version>2.4.0</version>
     </dependency>
-    
+  
+  	<!-- GWT servlet  RPC -->
+  	<dependency>
+      <groupId>com.google.gwt</groupId>
+      <artifactId>gwt-servlet</artifactId>
+      <version>2.4.0</version>
+    </dependency>
+      
     <!-- RequestFactory will use JSR 303 javax.validation if you let it -->
     <dependency>
       <groupId>javax.validation</groupId>
@@ -132,6 +139,12 @@
       <groupId>com.google.gwt.inject</groupId>
       <artifactId>gin</artifactId>
       <version>1.5.0</version>
+      <exclusions>
+        <exclusion>
+          <groupId>com.google.gwt</groupId>
+          <artifactId>gwt-servlet</artifactId>
+        </exclusion>
+      </exclusions>
 	</dependency>
 	
 	<!-- hibernate core -->
@@ -278,7 +291,6 @@
           <runTarget>example.html</runTarget>
           <hostedWebapp>${webappDirectory}</hostedWebapp>
           <i18nMessagesBundle>com.example.client.Messages</i18nMessagesBundle>
-          <preparationGoals>clean install</preparationGoals> 
         </configuration>
       </plugin>
 
