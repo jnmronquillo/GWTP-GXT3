@@ -132,12 +132,6 @@
       <groupId>com.google.gwt.inject</groupId>
       <artifactId>gin</artifactId>
       <version>1.5.0</version>
-      <exclusions>
-        <exclusion>
-          <groupId>com.google.gwt</groupId>
-          <artifactId>gwt-servlet</artifactId>
-        </exclusion>
-      </exclusions>
 	</dependency>
 	
 	<!-- hibernate core -->
@@ -284,6 +278,7 @@
           <runTarget>example.html</runTarget>
           <hostedWebapp>${webappDirectory}</hostedWebapp>
           <i18nMessagesBundle>com.example.client.Messages</i18nMessagesBundle>
+          <preparationGoals>clean install</preparationGoals> 
         </configuration>
       </plugin>
 
