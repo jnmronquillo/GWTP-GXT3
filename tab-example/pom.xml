@@ -291,6 +291,8 @@
           <runTarget>example.html</runTarget>
           <hostedWebapp>${webappDirectory}</hostedWebapp>
           <i18nMessagesBundle>com.example.client.Messages</i18nMessagesBundle>
+          <extraJvmArgs>-XX:MaxPermSize=512m -Xmx1024m</extraJvmArgs>
+		  <generateDirectory>${project.build.sourceDirectory}</generateDirectory>
         </configuration>
       </plugin>
 
