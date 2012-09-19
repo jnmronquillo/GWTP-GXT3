@@ -236,6 +236,7 @@
             <configuration>
                 <processors>                                
                   <processor>org.hibernate.jpamodelgen.JPAMetaModelEntityProcessor</processor>
+                  <processor>com.google.web.bindery.requestfactory.apt.RfValidator</processor>
                 </processors>
                 <outputDirectory>${project.build.directory}/generated-sources/gwt</outputDirectory>
             </configuration>
